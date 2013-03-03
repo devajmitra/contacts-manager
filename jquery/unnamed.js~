@@ -65,7 +65,6 @@ $(document).ready(function (){
 		var emailAddr = $("#emailAddr");
 		var mobileNum = $("#mobileNum");
 		
-		var source = $("#handlebars").html;
 		
 		var obj = { 
 		};

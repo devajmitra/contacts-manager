@@ -7,12 +7,6 @@ $(document).ready(function (){
 	$("#update").hide();
 	$("#delete").hide();
 
-	/*window.onload = function () {
-		if(localStorage.getItem("contacts") !== null){
-			 contacts=JSON.parse(localStorage['contacts']);
-		}
-	};*/
-
 	var showContact = function (e) {
 
 		$("#create").hide("slow");
@@ -122,10 +116,4 @@ $(document).ready(function (){
 	$("#delete").on('click', deleteContact);
 	$(document).on("click",".contact",showContact);
 	
-	/*window.onbeforeunload = function() {
-		localStorage['contacts']=JSON.stringify(contacts);
-	};*/
-
 });
-
-
