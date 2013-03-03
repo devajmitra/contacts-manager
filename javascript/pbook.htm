@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Contact Manager</title>
+		<link rel = "stylesheet" href = "css/bootstrap.css">
+		<style type = "text/css">
+			html, body {
+				margin-top:0px;
+				margin-bottom : 0px;
+				margin-right : 0px;
+				position:fixed;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.container {
+				margin-right : 30px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				margin-left:10px;
+				position:fixed;
+				
+				padding : 0px;
+				width: 100%;
+				height: 100%;	
+			}
+			
+			#list {			
+				
+				width : 20%;
+				float : left;
+				height: 90% ;
+				background-color : grey ;
+				overflow: auto;
+				
+
+				
+				padding-top: 20px;
+				padding-bottom: 20px;
+				padding-left : 20px;
+				padding-right:10px;
+				
+				text-align:left;
+			}
+			
+			/*#new{
+				margin-left : 120px;
+			}*/
+			
+			.crud {
+				text-align : left;
+				width : 100%;
+				padding-top: 10px;
+				margin-left: 320px;
+				height:90%;
+				background-color : white;
+			}
+			
+			h2{
+				text-align : center;
+			}
+			.contact{
+				cursor: hand; cursor: pointer;
+				text-decoration : underline;
+			}
+			#updateForm{
+				display:none;
+			}
+			
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class = "container">
+			<div id = "list" class = "hero-unit" >
+				<b>Contacts : </b> 
+				<button id = "new" class = "btn btn-small pull-right"><i class = "icon-user"></i> New</button><br><br>
+			</div>
+		
+			<h2 id = "formHeading">Add new contact:</h2>
+			<div id = "createForm" class = "crud">
+				<form name = "newContact">
+					<br>First Name <input name = "firstName" type = "text" placeholder = "Example: John">
+					<br>Last Name <input name = "lastName" type = "text" placeholder = "Example: Smith">
+					<br>Email Address <input name = "emailAddr" type = "email" placeholder = "abcd@example.com">
+					<br>Mobile Number <input name = "mobileNum" type = "tel" placeholder = "Enter your contact number">
+				
+					<br><br>
+					<button id = "create" type = "button" class = "btn btn-primary"><i class = "icon-plus icon-white"></i> Add</button>
+				</form>
+			</div>
+			<div id = "updateForm" class = "crud">	
+				<form name = "updateContact">
+					<br>First Name <input name = "firstName" type = "text" placeholder = "Example: John">
+					<br>Last Name <input name = "lastName" type = "text" placeholder = "Example: Smith">
+					<br>Email Address <input name = "emailAddr" type = "email" placeholder = "abcd@example.com">
+					<br>Mobile Number <input name = "mobileNum" type = "tel" placeholder = "Enter your contact number">
+				
+				
+					<br><br>
+					<button id = "update" type = "button" class = "btn btn-primary"><i class = "icon-edit icon-white"></i> Update</button>
+					<button id = "delete" type = "button" class = "btn btn-primary"><i class = "icon-trash icon-white"></i> Delete</button>
+				</form>
+			</div>
+		</div>
+		
+
+		</div>
+	</body>
+	
+	<script src = "jquery.js"></script>
+	<script src = "unnamed.js"></script>
+	<script src = "js/bootstrap.js"></script>
+</html>
+

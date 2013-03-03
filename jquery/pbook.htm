@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Contact Manager</title>
+		<link rel = "stylesheet" href = "css/bootstrap.css">
+		<style type = "text/css">
+			html, body {
+				margin-top:0px;
+				margin-bottom : 0px;
+				margin-right : 0px;
+				/*position:fixed;*/
+				width: 100%;
+				height: 100%;
+			}
+			
+			.container {
+				margin-right : 30px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				margin-left:0px;
+				position:fixed;
+				
+				padding : 0px;
+				width: 100%;
+				height: 100%;	
+			}
+			
+			#list {			
+				
+				width : 20%;
+				float : left;
+				height: 90% !important; 
+				background-color : grey ;
+				overflow: auto;
+				
+				margin-top : 10px;
+				margin-left:10px;
+				
+				padding-top: 20px;
+				padding-bottom: 20px;
+				padding-left : 20px;
+				padding-right:10px;
+				
+				text-align:left;
+			}
+			
+			h2{
+				text-align : center;
+			}
+			.contact{
+				cursor: hand; cursor: pointer;
+				text-decoration : underline;
+			}
+			#contactForm{
+				margin-left:0px;
+			}
+			
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class = "container row">
+			<div id = "list" class = "hero-unit container-fluid span">
+				<div class = "navbar">
+					<div class = "navbar-inner" style = "height:40px;padding-top:5px;">
+						<b>Contacts : </b> 
+						<button id = "new" class = "btn btn-small pull-right"><i class = "icon-user"></i> New</button><br><br>
+					</div>
+				</div>
+			</div>
+		
+			<h2 id = "formHeading">Add new contact:</h2>
+			
+			<div id = "contactForm" class = "container-fluid span">
+				<form>
+					<br>First Name <input id = "firstName" type = "text" placeholder = "Example: John">
+					<br>Last Name <input id = "lastName" type = "text" placeholder = "Example: Smith">
+					<br>Email Address <input id = "emailAddr" type = "email" placeholder = "abcd@example.com">
+					<br>Mobile Number <input id = "mobileNum" type = "tel" placeholder = "Enter your contact number">
+					<br><br>
+					<button id = "create" type = "button" class = "btn btn-primary"><i class = "icon-plus icon-white"></i> Add</button>
+					<button id = "update" type = "button" class = "btn btn-primary"><i class = "icon-edit icon-white"></i> Update</button>
+					<button id = "delete" type = "button" class = "btn btn-primary"><i class = "icon-trash icon-white"></i> Delete</button>
+				</form>
+			</div>		
+
+		</div>
+		
+
+	</body>
+	
+	<script src = "jquery.js"></script>
+	<script src = "js/bootstrap.js"></script>
+	<script src = "unnamed.js"></script>
+</html>
+

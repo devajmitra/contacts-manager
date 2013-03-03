@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+	<title>Contacts Manager</title>
+	<link rel = "stylesheet" href = "css/bootstrap.css">
+	<link rel = "stylesheet" href = "css/style.css">
+</head>
+
+<body ng-controller = "contactManager">
+	<div class = "container row">
+		<div id = "list" class = "hero-unit container-fluid span">
+			<div class = "navbar-inner" style = "height:40px;padding-top:5px;">
+				<b>Contacts : </b> 
+				<button id = "new" ng-click = "newContact()" class = "btn btn-small pull-right"><i class = "icon-user"></i> New</button><br><br>
+			</div>
+			<div class = "contact" ng-click = "showContact(contact)" ng-repeat = "contact in contacts">
+				{{contact.firstName}} {{contact.lastName}}
+			</div>
+		</div>
+		
+		<h2 ng-model = "formHeading">{{formHeading}}</h2>
+		
+		<div id = "contactForm" class = "container-fluid span">
+			<form>
+				<br>First Name <input id = "firstName" ng-model = "contact.firstName" type = "text" placeholder = "Example: John">
+				<br>Last Name <input id = "lastName" ng-model = "contact.lastName" type = "text" placeholder = "Example: Smith">
+				<br>Email Address <input id = "emailAddr" ng-model = "contact.emailAddr" type = "text" placeholder = "abcd@example.com">
+				<br>Mobile Number <input id = "mobileNum" ng-model = "contact.mobileNum" type = "tel" placeholder = "Enter your contact number">
+				<br><br>
+				<button id = "create" type = "button" ng-hide = "addHidden" ng-click = "createContact()" class = "btn btn-primary"><i class = "icon-plus icon-white"></i> Add</button>
+				<button id = "delete" type = "button" ng-hide = "delHidden" ng-click = "deleteContact()" class = "btn btn-primary"><i class = "icon-trash icon-white"></i> Delete</button>
+			</form>
+		</div>
+	
+	</div>
+</body>
+
+<script src = "js/jquery.js"></script>
+<script src = "js/bootstrap.js"></script>
+<script src = "js/angular.js"></script>
+<script src = "js/script.js"></script>
+
+</html>
